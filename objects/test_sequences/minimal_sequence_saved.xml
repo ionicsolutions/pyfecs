@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sequence>
+	<name>Minimal Sequence</name>
+	<length>100.0</length>
+	<shots>100</shots>
+	<variants>10</variants>
+	<hardwareConfig>
+		<name>Minimal Setup</name>
+		<FPGADelayUnit>0.01</FPGADelayUnit>
+		<controlRegister>
+			<length>1</length>
+			<bit input="1" output="1">0</bit>
+		</controlRegister>
+		<counter>
+			<name>PMT</name>
+			<channelID>0</channelID>
+		</counter>
+		<output>
+			<name>Laser</name>
+			<channelID>0</channelID>
+			<polarity>True</polarity>
+			<idleState>False</idleState>
+		</output>
+		<sequencePulseCounter>
+			<name>SPC1</name>
+			<channelID>0</channelID>
+			<gate>2</gate>
+		</sequencePulseCounter>
+	</hardwareConfig>
+	<channel>
+		<name>Laser</name>
+		<window>
+			<name>Shine On</name>
+			<start type="absolute">10.0</start>
+			<end type="absolute">70.0</end>
+		</window>
+	</channel>
+	<counter>
+		<name>PMT</name>
+		<window>
+			<name>I See You</name>
+			<start type="absolute">50.0</start>
+			<end type="absolute">70.0</end>
+		</window>
+	</counter>
+	<control>
+		<name>SPC1</name>
+		<window>
+			<name>Check</name>
+			<start type="absolute">60.0</start>
+			<end type="absolute">70.0</end>
+		</window>
+		<jump>
+			<name>Success</name>
+			<time type="absolute">75.0</time>
+			<window>Check</window>
+			<condition type="threshold">
+				<threshold>10000</threshold>
+				<destination type="start">Shine On</destination>
+			</condition>
+			<condition type="else">
+				<pass/>
+			</condition>
+		</jump>
+	</control>
+</sequence>

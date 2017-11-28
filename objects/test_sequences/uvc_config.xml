@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hardwareConfig>
+		<name>UVC</name>
+		<FPGADelayUnit>0.01</FPGADelayUnit>
+		<controlRegister>
+			<length>3</length>
+			<bit output="13" input="6">0</bit>
+			<bit output="12" input="3">1</bit>
+			<bit output="14" input="5">2</bit>
+		</controlRegister>
+		<output>
+			<name>370</name>
+			<channelID>1</channelID>
+			<polarity>False</polarity>
+			<idleState>True</idleState>
+		</output>
+		<output>
+			<name>14GHz</name>
+			<channelID>3</channelID>
+			<polarity>True</polarity>
+			<idleState>True</idleState>
+		</output>
+		<output>
+			<name>2.1GHz</name>
+			<channelID>4</channelID>
+			<polarity>False</polarity>
+			<idleState>False</idleState>
+		</output>
+		<output>
+			<name>Mira</name>
+			<channelID>5</channelID>
+			<polarity>True</polarity>
+			<idleState>False</idleState>
+		</output>
+		<sequencePulseCounter>
+			<name>CavityPMTSPC</name>
+			<channelID>1</channelID>
+			<gate>17</gate>
+		</sequencePulseCounter>
+		<output>
+			<name>CavityPumpAOM</name>
+			<channelID>8</channelID>
+			<polarity>False</polarity>
+			<idleState>True</idleState>
+		</output>
+		<output>
+			<name>935</name>
+			<channelID>2</channelID>
+			<polarity>False</polarity>
+			<idleState>True</idleState>
+		</output>
+		<output>
+			<name>CavityPhotonGate</name>
+			<channelID>6</channelID>
+			<polarity>True</polarity>
+			<idleState>True</idleState>
+		</output>
+		<output>
+			<name>APD Gate</name>
+			<channelID>11</channelID>
+			<polarity>True</polarity>
+			<idleState>True</idleState>
+		</output>
+		<output>
+			<name>RamanDLICRegulationAndShutter</name>
+			<channelID>15</channelID>
+			<polarity>True</polarity>
+			<idleState>False</idleState>
+		</output>
+		<output>
+			<name>RamanOutAOM</name>
+			<channelID>7</channelID>
+			<polarity>False</polarity>
+			<idleState>True</idleState>
+		</output>
+	</hardwareConfig>

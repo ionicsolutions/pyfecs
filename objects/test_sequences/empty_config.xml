@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hardwareConfig>
+	<name>Auto-generated empty configuration</name>
+	<FPGADelayUnit>0.01</FPGADelayUnit>
+	<controlRegister>
+		<length>0</length>
+	</controlRegister>
+</hardwareConfig>

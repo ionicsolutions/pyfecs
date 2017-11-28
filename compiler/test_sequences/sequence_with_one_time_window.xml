@@ -1,0 +1,40 @@
+<sequence>
+    <name>With one TimeWindow</name>
+    <length>100</length>
+    <variants>10</variants>
+    <shots>1000</shots>
+    <hardwareConfig>
+        <name>Minimal Setup</name>
+        <FPGADelayUnit>0.01</FPGADelayUnit>
+        <output>
+            <name>Laser</name>
+            <channelID>0</channelID>
+            <polarity>True</polarity>
+            <idleState>False</idleState>
+        </output>
+        <counter>
+            <name>PMT</name>
+            <channelID>0</channelID>
+        </counter>
+        <sequencePulseCounter>
+            <name>SPC1</name>
+            <channelID>0</channelID>
+            <gate>2</gate>
+        </sequencePulseCounter>
+            <controlRegister>
+            <length>4</length>
+            <bit output="8" input="1">0</bit>
+            <bit output="9" input="2">1</bit>
+            <bit output="10" input="3">2</bit>
+            <bit output="11" input="4">3</bit>
+        </controlRegister>
+    </hardwareConfig>
+    <channel>
+        <name>Laser</name>
+        <window>
+            <name>Shine On</name>
+            <start type="absolute">0</start>
+            <end type="absolute">20</end>
+        </window>
+    </channel>
+</sequence>
